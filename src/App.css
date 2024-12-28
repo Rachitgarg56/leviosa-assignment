@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.css-hlbajn-MuiRating-label {
+  font-size: 17px;
+}
+.MuiBox-root.css-pikhkf {
+  display: flex;
+}
+
+.courses-section::-webkit-scrollbar {
+  display: none;
+}
