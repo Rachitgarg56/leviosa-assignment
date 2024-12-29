@@ -1,22 +1,29 @@
 import { createSlice } from '@reduxjs/toolkit';
+import coursesData from '../../data/coursesData';
 
-const initialState = {
-  courses: [],
-  selectedCourse: null,
-};
-
-const coursesSlice = createSlice({
-  name: 'courses',
-  initialState,
+const courseSlice = createSlice({
+  name: 'course',
+  initialState: {
+    courses: [...coursesData],
+    selectedCourse: coursesData[0],
+  },
   reducers: {
     setCourses: (state, action) => {
+      console.log(state.courses)
       state.courses = action.payload;
     },
-    selectCourse: (state, action) => {
-      state.selectedCourse = action.payload;
+    setSelectedCourse: (state, action) => {
+      
+      const course = state.courses.find(
+        (course) => course.creatorName === action.payload
+      );
+      if (course) {
+        state.selectedCourse = course;
+      }
     },
   },
 });
 
-export const { setCourses, selectCourse } = coursesSlice.actions;
-export default coursesSlice.reducer;
+export const { setCourses, setSelectedCourse } = courseSlice.actions;
+
+export default courseSlice.reducer;

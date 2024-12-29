@@ -2,12 +2,19 @@ import BasicRating from "./BasicRating"
 import { SiTicktick as All } from "react-icons/si";
 import { MdSignalCellular3Bar as Intermediate } from "react-icons/md";
 import { MdSignalCellular1Bar as Beginner } from "react-icons/md";
+import { useDispatch } from 'react-redux';
+import { setSelectedCourse } from '../features/courses/coursesSlice';
 
 const CourseCard = (props) => {
+  const dispatch = useDispatch();
   const { name, description, stars, img, usersReviewed, level} = props.courseData;
 
+  function handleClick() {
+    dispatch(setSelectedCourse(props.courseData.creatorName));
+  }
+
   return (
-    <div className="flex items-center w-full p-3 rounded-xl h-[130px] gap-4 bg-white shadow-md">
+    <div className="flex items-center w-full p-3 rounded-xl h-[130px] gap-4 bg-white shadow-md cursor-pointer" onClick={handleClick}>
       <figure className="w-[33%] rounded-xl h-full">
         <img className="w-full rounded-xl  h-full object-cover" src={img} alt="course-image" />
       </figure>

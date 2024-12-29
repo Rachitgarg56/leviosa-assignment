@@ -13,10 +13,10 @@ const coursesData = [
       language: "English",
       img: "https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       content: [
-        { name: "HTML Basics", description: "Introduction to HTML", ytv: "https://youtube.com/example1-1", status: false },
-        { name: "CSS Basics", description: "Learn CSS for styling", ytv: "https://youtube.com/example1-2", status: false },
-        { name: "JavaScript Basics", description: "Introduction to JavaScript", ytv: "https://youtube.com/example1-3", status: false },
-        { name: "Responsive Design", description: "Learn responsive web design", ytv: "https://youtube.com/example1-4", status: false },
+        { name: "HTML Basics", description: "Introduction to HTML", ytv: "https://www.youtube.com/embed/z9FeTl5eq9E", status: false, color: "orange" },
+        { name: "CSS Basics", description: "Learn CSS for styling", ytv: "https://www.youtube.com/embed/ZxKM3DCV2kE", status: false, color: "yellow" },
+        { name: "JavaScript Basics", description: "Introduction to JavaScript", ytv: "https://www.youtube.com/embed/dX8396ZmSPk", status: false, color: "red" },
+        { name: "Responsive Design", description: "Learn responsive web design", ytv: "https://www.youtube.com/embed/Q33KBiDriJY", status: false, color: "pink" },
       ],
     },
     {
@@ -33,9 +33,9 @@ const coursesData = [
       language: "English",
       img: "https://images.unsplash.com/photo-1649180556628-9ba704115795?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       content: [
-        { name: "Python Basics", description: "Learn Python fundamentals", ytv: "https://youtube.com/example2-1", status: false },
-        { name: "Data Analysis", description: "Pandas for data analysis", ytv: "https://youtube.com/example2-2", status: false },
-        { name: "Data Visualization", description: "Plotting with Matplotlib", ytv: "https://youtube.com/example2-3", status: false },
+        { name: "Python Basics", description: "Learn Python fundamentals", ytv: "https://www.youtube.com/embed/ZcaKgqXsEbA", status: false, color: "orange" },
+        { name: "Data Analysis", description: "Pandas for data analysis", ytv: "https://www.youtube.com/embed/ua-CiDNNj30", status: false, color: "yellow" },
+        { name: "Data Visualization", description: "Plotting with Matplotlib", ytv: "https://www.youtube.com/embed/-ETQ97mXXF0", status: false, color: "red" },
       ],
     },
     {
@@ -52,10 +52,10 @@ const coursesData = [
       language: "English",
       img: "https://plus.unsplash.com/premium_photo-1685086785636-2a1a0e5b591f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       content: [
-        { name: "Frontend Basics", description: "HTML, CSS, JS overview", ytv: "https://youtube.com/example3-1", status: false },
-        { name: "Backend Basics", description: "Introduction to Node.js", ytv: "https://youtube.com/example3-2", status: false },
-        { name: "Databases", description: "Database concepts and MongoDB", ytv: "https://youtube.com/example3-3", status: false },
-        { name: "APIs", description: "Building REST APIs", ytv: "https://youtube.com/example3-4", status: false },
+        { name: "Frontend Basics", description: "HTML, CSS, JS overview", ytv: "https://www.youtube.com/embed/0GYU5JOYkdI", status: false, color: "orange" },
+        { name: "Backend Basics", description: "Introduction to Node.js", ytv: "https://www.youtube.com/embed?list=PLEiEAq2VkUULCC3eEATL4zzuapTjmo1Z_", status: false, color: "yellow" },
+        { name: "Databases", description: "Database concepts and MongoDB", ytv: "https://www.youtube.com/embed/8sXRyHI3bLw", status: false, color: "red" },
+        { name: "APIs", description: "Building REST APIs", ytv: "https://www.youtube.com/embed/u1TLyC04ktE", status: false, color: "pink" },
       ],
     },
     {
@@ -72,9 +72,9 @@ const coursesData = [
       language: "English",
       img: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       content: [
-        { name: "UX Basics", description: "Understanding user experience", ytv: "https://youtube.com/example4-1", status: false },
-        { name: "Wireframing", description: "Creating wireframes", ytv: "https://youtube.com/example4-2", status: false },
-        { name: "UI Basics", description: "Designing user interfaces", ytv: "https://youtube.com/example4-3", status: false },
+        { name: "UX Basics", description: "Understanding user experience", ytv: "https://www.youtube.com/embed/3u9jXGwoWC8", status: false, color: "orange" },
+        { name: "Wireframing", description: "Creating wireframes", ytv: "https://www.youtube.com/embed/dYtdv--qd_U", status: false, color: "yellow" },
+        { name: "UI Basics", description: "Designing user interfaces", ytv: "https://www.youtube.com/embed/t0OIk9FuMgM", status: false, color: "red" },
       ],
     },
     {
@@ -91,10 +91,10 @@ const coursesData = [
       language: "English",
       img: "https://plus.unsplash.com/premium_photo-1682124651258-410b25fa9dc0?q=80&w=1921&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       content: [
-        { name: "ML Basics", description: "Introduction to machine learning", ytv: "https://youtube.com/example5-1", status: false },
-        { name: "Linear Regression", description: "Understanding regression models", ytv: "https://youtube.com/example5-2", status: false },
-        { name: "Classification", description: "Building classifiers", ytv: "https://youtube.com/example5-3", status: false },
-        { name: "Deep Learning", description: "Introduction to neural networks", ytv: "https://youtube.com/example5-4", status: false },
+        { name: "ML Basics", description: "Introduction to machine learning", ytv: "https://www.youtube.com/embed/j87TPH5b6Ds", status: false, color: "orange" },
+        { name: "Linear Regression", description: "Understanding regression models", ytv: "https://www.youtube.com/embed?list=PLEiEAq2VkUULYYgj13YHUWmRePqiu8Ddy", status: false, color: "yellow" },
+        { name: "Classification", description: "Building classifiers", ytv: "https://www.youtube.com/embed/bmmQA8A-yUA", status: false, color: "red" },
+        { name: "Deep Learning", description: "Introduction to neural networks", ytv: "https://www.youtube.com/embed/PkAx2YZIWwQ", status: false, color: "pink" },
       ],
     },
 ];
