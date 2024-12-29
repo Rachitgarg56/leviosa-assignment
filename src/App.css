@@ -14,3 +14,7 @@
 .courses-section::-webkit-scrollbar {
   display: none;
 }
+
+.courses-detail-section::-webkit-scrollbar {
+  display: none;
+}

@@ -12,6 +12,7 @@ export default {
         'active-brown': '#D6CBC7',
         'course-card-topic': '#515151',
         'courses-section': '#F9F9F9',
+        'course': '#383838',
       }
     },
   },
