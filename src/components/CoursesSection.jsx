@@ -12,7 +12,7 @@ const languageFiltersData = {
 
 const CoursesSection = () => {
   return (
-    <div className="courses-section w-[40%] p-6 bg-courses-section rounded-2xl overflow-y-scroll flex flex-col gap-6">
+    <div className="courses-section w-[40%] p-6 bg-courses-section rounded-2xl overflow-y-scroll flex flex-col gap-6 max-1240:w-[50%] max-1000:w-[40%] max-700:overflow-y-visible max-700:w-full max-426:p-2">
       <div className="flex flex-col gap-4">
         <div className="flex items-center justify-between">
           <h1 className="text-course font-bold text-2xl">Courses</h1>
@@ -25,8 +25,8 @@ const CoursesSection = () => {
           <span className="text-sm text-gray-400">Completed</span>
         </div>
 
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
+        <div className="flex items-center justify-between gap-4">
+          <div className="language-filter flex items-center gap-4 max-1000:flex-wrap">
             {Object.entries(languageFiltersData).map(([language, icon]) => (
               <div key={language} className="bg-gray-100 p-2 px-2 rounded-lg flex items-center gap-2 shadow-md">
                 <div className="text-gray-500">{icon}</div>
@@ -35,7 +35,7 @@ const CoursesSection = () => {
             ))}
           </div>
 
-          <div className="p-2 bg-white rounded-md">
+          <div className="p-2 bg-white rounded-md max-1000:hidden max-700:overflow-y-visible">
             <Filter/>
           </div>
         </div>

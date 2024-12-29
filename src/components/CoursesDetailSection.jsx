@@ -11,7 +11,7 @@ const CoursesDetailSection = () => {
   const { ytv, creatorName, creatorProfession, description, level, name, stars, status, usersReviewed, creatorProfile, content } = course;
   
   return (
-    <div className="courses-detail-section bg-white w-[60%] p-6 rounded-2xl flex flex-col gap-6 overflow-y-scroll">
+    <div className="courses-detail-section bg-white w-[60%] p-6 rounded-2xl flex flex-col gap-6 overflow-y-scroll max-1240:w-[50%] max-1000:w-[60%] max-700:overflow-y-visible max-700:w-full max-426:p-2">
       <div className='flex flex-col gap-2'>
 
         <div className="aspect-video w-full rounded-xl">

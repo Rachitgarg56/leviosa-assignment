@@ -5,6 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'max-1240': { 'max': '1240px' },
+      'max-1000': { 'max': '1000px' },
+      'max-885': { 'max': '885px' },
+      'max-700': { 'max': '700px' },
+      'max-426': { 'max': '426px' },
+    },
     extend: {
       colors: {
         'dark-chocolate': '#180700',
