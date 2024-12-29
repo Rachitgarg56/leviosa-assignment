@@ -7,6 +7,7 @@ const courseSlice = createSlice({
     courses: [...coursesData],
     selectedCourse: coursesData[0],
     filteredCourses: [...coursesData],
+    searchedCourses: null,
   },
   reducers: {
     setSelectedCourse: (state, action) => {
@@ -33,9 +34,22 @@ const courseSlice = createSlice({
         );
       }
     },
+    filterCoursesByName: (state, action) => {
+      if (action.payload === "") {
+        state.searchedCourses = null;  
+      } else {
+        const input = action.payload.toLowerCase(); 
+        state.searchedCourses = state.courses.filter((course) =>
+          course.name.toLowerCase().includes(input) 
+        );
+      }
+    },
+    clearSearchedCourses: (state, action) => {
+      state.searchedCourses = action.payload;
+    }
   },
 });
 
-export const { setSelectedCourse, updateSelectedCourseVideo, filterCoursesByLanguage } = courseSlice.actions;
+export const { setSelectedCourse, updateSelectedCourseVideo, filterCoursesByLanguage, filterCoursesByName, clearSearchedCourses } = courseSlice.actions;
 
 export default courseSlice.reducer;

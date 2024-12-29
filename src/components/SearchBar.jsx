@@ -1,9 +1,17 @@
 import { useState } from 'react';
 import { MDBContainer } from 'mdb-react-ui-kit';
-import { FaSearch } from 'react-icons/fa'; // Import search icon
+import { FaSearch } from 'react-icons/fa'; 
+import { useDispatch, useSelector } from 'react-redux';
+import { filterCoursesByName } from '../features/courses/coursesSlice';
 
 const ExpandingSearchBar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const dispatch = useDispatch();
+
+  const handleInputChange = (event) => {
+    const inputValue = event.target.value;
+    dispatch(filterCoursesByName(inputValue)); 
+  };
 
   return (
     <MDBContainer>
@@ -19,8 +27,9 @@ const ExpandingSearchBar = () => {
           <input
             type="text"
             className={`border border-gray-300 rounded-lg p-2 pr-8 transition-all duration-300 ease-in-out absolute right-0 bg-white shadow-md ${isExpanded ? 'opacity-100' : 'opacity-0 w-0'}`}
-            placeholder="Search..."
+            placeholder="Search course name..."
             style={{ width: isExpanded ? '100%' : '0', right: isExpanded ? '0' : '-100%' }}
+            onChange={handleInputChange}
           />
         </div>
       </div>

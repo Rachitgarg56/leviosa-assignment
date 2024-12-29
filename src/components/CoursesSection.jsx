@@ -3,7 +3,7 @@ import { CircleFlag } from 'react-circle-flags';
 import { IoFilterSharp as Filter } from "react-icons/io5";
 import ExpandingSearchBar from "./SearchBar";
 import { useDispatch } from 'react-redux';
-import { filterCoursesByLanguage } from '../features/courses/coursesSlice';
+import { filterCoursesByLanguage, clearSearchedCourses } from '../features/courses/coursesSlice';
 import { useState } from 'react';
 
 const languageFiltersData = {
@@ -27,6 +27,7 @@ const CoursesSection = () => {
       setSelectedLang(lang);
       dispatch(filterCoursesByLanguage(lang));
     }
+    dispatch(clearSearchedCourses(null));
   }
 
   return (
