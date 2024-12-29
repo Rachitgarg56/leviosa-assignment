@@ -2,6 +2,8 @@
 
 [Hosted Link](https://leviosa-assignment.vercel.app/courses)
 
+[Assignment Explanation Video Link](https://www.loom.com/share/279ed834199b41e987108cfd7edaf2c0?sid=4aff5b12-0afd-4a03-a29f-ed3d2525f767)
+
 ## Description
 A responsive and feature-rich Course Management Application built using React.js, Redux Toolkit, and Tailwind CSS. This project demonstrates filtering, searching, and video playback functionalities, providing an interactive user experience.
 
