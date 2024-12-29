@@ -47,7 +47,7 @@ const CoursesSection = () => {
         <div className="flex items-center justify-between gap-4">
           <div className="language-filter flex items-center gap-4 max-1000:flex-wrap">
             {Object.entries(languageFiltersData).map(([language, icon]) => (
-              <div key={language} className={`${selectedLang === language && 'bg-green-400'} bg-gray-100 p-2 px-2 rounded-lg flex items-center gap-2 shadow-md`} onClick={()=>{
+              <div key={language} className={`${selectedLang === language && 'bg-green-400'} bg-gray-100 p-2 px-2 rounded-lg flex items-center gap-2 shadow-md cursor-pointer`} onClick={()=>{
                 applyFilter(language);
               }}>
                 <div className="text-gray-500">{icon}</div>
