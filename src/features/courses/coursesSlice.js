@@ -6,12 +6,9 @@ const courseSlice = createSlice({
   initialState: {
     courses: [...coursesData],
     selectedCourse: coursesData[0],
+    filteredCourses: [...coursesData],
   },
   reducers: {
-    setCourses: (state, action) => {
-      console.log(state.courses)
-      state.courses = action.payload;
-    },
     setSelectedCourse: (state, action) => {
       
       const course = state.courses.find(
@@ -21,9 +18,24 @@ const courseSlice = createSlice({
         state.selectedCourse = course;
       }
     },
+    updateSelectedCourseVideo: (state, action) => {
+      const ytv = action.payload;
+      if (state.selectedCourse && state.selectedCourse.hasOwnProperty('ytv')) {
+        state.selectedCourse.ytv = ytv;
+      }
+    },
+    filterCoursesByLanguage: (state, action) => {
+      if (action.payload === "") {
+        state.filteredCourses = state.courses;
+      } else {
+        state.filteredCourses = state.courses.filter(
+          (course) => course.language === action.payload
+        );
+      }
+    },
   },
 });
 
-export const { setCourses, setSelectedCourse } = courseSlice.actions;
+export const { setSelectedCourse, updateSelectedCourseVideo, filterCoursesByLanguage } = courseSlice.actions;
 
 export default courseSlice.reducer;

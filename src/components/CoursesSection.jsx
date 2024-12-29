@@ -2,6 +2,9 @@ import CoursesContainer from "./CoursesContainer"
 import { CircleFlag } from 'react-circle-flags';
 import { IoFilterSharp as Filter } from "react-icons/io5";
 import ExpandingSearchBar from "./SearchBar";
+import { useDispatch } from 'react-redux';
+import { filterCoursesByLanguage } from '../features/courses/coursesSlice';
+import { useState } from 'react';
 
 const languageFiltersData = {
   'English': <CircleFlag countryCode="gb" height="20" width={20} />,
@@ -10,7 +13,22 @@ const languageFiltersData = {
   'Chinese': <CircleFlag countryCode="cn" height="20" width={20} />,
 } 
 
-const CoursesSection = () => {
+const CoursesSection = () => { 
+  const [selectedLang, setSelectedLang] = useState(null);
+
+  const dispatch = useDispatch();
+
+  function applyFilter(lang) {
+    if (selectedLang === lang) {
+      setSelectedLang(null);
+      dispatch(filterCoursesByLanguage(""));
+      return;
+    } else {
+      setSelectedLang(lang);
+      dispatch(filterCoursesByLanguage(lang));
+    }
+  }
+
   return (
     <div className="courses-section w-[40%] p-6 bg-courses-section rounded-2xl overflow-y-scroll flex flex-col gap-6 max-1240:w-[50%] max-1000:w-[40%] max-700:overflow-y-visible max-700:w-full max-426:p-2">
       <div className="flex flex-col gap-4">
@@ -28,7 +46,9 @@ const CoursesSection = () => {
         <div className="flex items-center justify-between gap-4">
           <div className="language-filter flex items-center gap-4 max-1000:flex-wrap">
             {Object.entries(languageFiltersData).map(([language, icon]) => (
-              <div key={language} className="bg-gray-100 p-2 px-2 rounded-lg flex items-center gap-2 shadow-md">
+              <div key={language} className={`${selectedLang === language && 'bg-green-400'} bg-gray-100 p-2 px-2 rounded-lg flex items-center gap-2 shadow-md`} onClick={()=>{
+                applyFilter(language);
+              }}>
                 <div className="text-gray-500">{icon}</div>
                 <div className="text-xs font-semibold text-gray-500">{language}</div>
               </div>
